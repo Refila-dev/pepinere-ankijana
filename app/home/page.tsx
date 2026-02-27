@@ -1,4 +1,17 @@
+'use client';
+
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
+
+
+  const handleLearnMore = () => {
+    setTimeout(() => {
+      router.push("/about");
+    }, 1000);
+  };
+
   return (
     <div>
       <main className="bg-url('/public/plantes-bg.jpeg') bg-cover bg-center h-screen flex items-center justify-center">
@@ -18,7 +31,7 @@ export default function Home() {
             reprehenderit laborum unde nulla placeat.
           </p>
           <div className="mt-30 flex justify-center items-center">
-            <button className="bg-green-500 text-white w-70 h-16 rounded-4xl animate-bounce hover:cursor-pointer hover:bg-green-800 flex flex-col items-center justify-center gap-2">
+            <button onClick={handleLearnMore} className="bg-green-500 text-white w-70 h-16 rounded-4xl animate-bounce hover:cursor-pointer hover:bg-green-800 flex flex-col items-center justify-center gap-2">
               Te hahafantatra misymisy kokoa
               <svg
                 xmlns="http://www.w3.org/2000/svg"
