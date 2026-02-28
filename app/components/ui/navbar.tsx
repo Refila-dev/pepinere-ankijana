@@ -68,7 +68,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <a href="#">Ny vokatra</a>
+            <a href="/product">Ny vokatra</a>
           </div>
           <div className="flex items-center gap-2">
             <svg
